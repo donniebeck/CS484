@@ -1,0 +1,40 @@
+
+a1. Component scanning is one of the methods Spring can use to 
+create object factories for beans. An annotation "@Component" 
+can be added before an object class to tell Spring to create an
+object factory for the object.
+
+The bean life cycle begins with a container/object factory 
+starting. The container then instantiates a bean, checks for 
+dependencies, and then injects those dependencies into the bean.
+Spring then does some processing with the bean. If a custom 
+initialization method is defined for the bean, it will be 
+called. Finally, the bean is ready for use. After the bean has 
+been used, the Spring container is closed and the bean is 
+destroyed.If a custom destroy method is defined, it will be
+ called. Then the bean's life-cycle reaches an end.
+
+
+By default, beans are instantiated as singleton beans, meaning 
+only one bean is used for each call to the bean. A similar 
+comparison to this would be the Java keyword, "static". Other 
+beans scopes can include: prototype, a new bean is created for 
+each request;request, the bean maintains its lifespan for the 
+duration of an HTTP web request; session, the bean maintains its
+lifespan for the duration of an HTTP web session; and 
+global-session, the bean maintains its lifespan for the duration
+of a global HTTP web session.
+
+a2. A qualifier is needed when there are multiple 
+implementations of an interface, which Spring uses to create 
+beans. By using qualifiers, we can tell Spring which 
+implementation to use.
+
+b. Java config, as opposed to component scanning, allows the 
+developer to create beans without needing to modify the source 
+code of objects. As opposed to XML configuration, Java config 
+allows the developer to use the compiler to check if the bean 
+dependencies and qualifiers are correct; and in the case of 
+beans being using for important/sensitive information, Java 
+config allows the developerto keep bean information hidden from
+those who do not have the source code.
