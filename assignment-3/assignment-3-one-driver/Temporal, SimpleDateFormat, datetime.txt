@@ -1,0 +1,10 @@
+By default, the java.util.Date/java.util.Calendar objects are not
+in a compatible format for usage in SQL. By using @Temporal, the 
+java objects are converted to a type that is compatible with SQL date formats.
+
+The usage of SimpleDateFormat allows us to convert back and forth 
+from Java String to Java Date/Calendar.
+
+From my understanding, the usage of @Temporal to convert Date/Calendar objects
+is slightly depracted and usage of java.sql.Time, java.sql.Timestamp, and
+java.sql.Date are now preferred.
