@@ -1,0 +1,39 @@
+body 
+{
+  	background-color: #f2f3f4;
+  	font-family: arial, sans-serif;
+	font-size: 14px;
+}
+input, textarea 
+{ 
+	width: 100%; 
+}
+
+#header 
+{
+	background-size:100%;  
+ 	position:fixed;
+  	left: 0;
+ 	right: 0;
+  	top: 0;
+	background-color: #72e5be;
+	font-weight: bold;
+	text-align: center;
+}
+#container
+{
+	margin-top:75px;
+}
+table
+{
+	border-collapse: collapse;
+	width:auto;
+}
+td
+{
+	padding: 15px;
+}
+td:first-child
+{
+	font-weight: bold;
+}
